@@ -1,12 +1,24 @@
-.body{
-    background: #212529;
-}
-
-.container-usuarios{
-    margin-top: 15%;
+body{
+    background: #DBDBDB;
 }
 
 .thead-escuto{
     background: #212529;
     color: #FFFF;
+}
+
+#edit-btn, #delete-btn{
+    border: none;
+    margin-bottom: 1rem;
+    background: #212529;
+    color: #FFFF;
+    border-radius: 5px;
+}
+
+#delete-btn:hover{
+    background: #991010;
+}
+
+#edit-btn:hover{
+    background: #006e00;
 }

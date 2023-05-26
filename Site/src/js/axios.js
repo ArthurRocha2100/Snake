@@ -16,7 +16,7 @@ document.getElementById('post-btn').onclick = () => {
     var userName = document.getElementById('user-name').value;
     var userEmail = document.getElementById('user-email').value;
     var userPassword = document.getElementById('user-password').value;
-
+    
     const data = {
         name: userName,
         email: userEmail,
