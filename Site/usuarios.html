@@ -16,6 +16,37 @@
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
+
+    <div id="delete-div" class="w-25 position-absolute top-50 start-50 translate-middle mx-auto bg-secondary d-none border rounded-3">
+
+        <i id="close-btn" class="bi bi-x-circle text-light position-absolute top-0 end-0 m-3"></i>
+        
+        <form class="container">
+            <div class="m-3 w-80 p-3">
+                <p class="text-light">Informe o id do ususario que deseja excluir</p>
+                <input id="id_user-delete" class="form-control" type="text" placeholder="Id" aria-label="default input example">
+            </div>
+            <button id="delete_div-btn" class="position-relative top-100 start-50 translate-middle">Exclir</button>
+        </form>
+    </div>
+    
+
+    <div id="edit-div" class="w-25 position-absolute top-50 start-50 translate-middle mx-auto bg-secondary d-none border rounded-3">
+
+        <i id="close_btn-edit" class="bi bi-x-circle text-light position-absolute top-0 end-0 m-3"></i>
+        
+        <form class="container d-block">
+            <div class="m-3 w-80 p-3">
+                <p class="text-light">Informe o id do usuario que dejesa atualizar</p>
+                <input id="user-edit_id" class="form-control m-3" type="text" placeholder="Id" aria-label="default input example">
+                <input id="user-edit_name" class="form-control m-3" type="text" placeholder="Nome" aria-label="default input example">
+                <input id="user-edit_email" class="form-control m-3" type="text" placeholder="E-mail" aria-label="default input example">
+                <input id="user-edit_password" class="form-control m-3" type="text" placeholder="Senha" aria-label="default input example">
+            </div>
+            <button id="edit_div-btn" class="position-relative top-100 start-50 translate-middle">Editar</button>
+        </form>
+    </div>
+
     <div class="w-80 my-2 d-block container container-usuarios">
         <h2 class="titulo mb-5">Lista de usuários Cadastrados</h2>
     
@@ -27,6 +58,7 @@
                 <tr>
                     <th scope="col">Id</th>
                     <th scope="col">Nome</th>
+                    <th scope="col">email</th>
                 </tr>
             </thead>
             <tbody id="table-data">
