@@ -1,24 +1,13 @@
 body{
-    background: #DBDBDB;
+    background: #a2c5f3;
     align-items: center;
 }
 
 .container-cadastro{
-    border-radius: 20px;
-    background: #F5F5F5;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    margin: 5% auto ;
-    width: 50%;
+    width: 60%;
 }
-
-footer{
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    padding-top: 1rem;
+.welcome{
+    background: #4f93fa;
 }
 
 
@@ -27,8 +16,10 @@ footer{
     .container-cadastro{
         border-radius: 0;
         margin: 0;
-        width: 100%;
+        padding: 30% auto;
+        width: 100lvw;
         height: 100lvh;
+        
     }
     
 }

@@ -53,6 +53,22 @@ class userController {
             res.status(500).send(err.message)
         }
     }
+
+    static checkUserExsistsByEmail = async (req, res) => {
+        const email = req.body.email;
+
+        try {
+            const userExists = await user.findOne({email: email});
+            if(userExists){
+                res.status(200).json(userExists)
+            }
+            else {
+                res.status(500).send('user not exsists')
+            }
+        } catch (err) {
+            res.status(500).send(err.message)
+        }
+    }
 }
 
 export default userController
