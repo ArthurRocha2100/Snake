@@ -17,7 +17,7 @@ window.onload = () => {
     var positionX = 5;
     var positionY = 5;
     var lengthPart = 20;
-    var quantitP = 30;
+    var quantitP = 25;
     var appleX = 3; 
     var appleY = 3;
 
@@ -46,16 +46,15 @@ window.onload = () => {
             positionY = 0
         }
 
-        context.fillStyle = "black";
+        context.fillStyle = "#4f93fa";
         context.fillRect(0,0, arenaG.width, arenaG.height)
 
-        context.fillStyle = "red";
-        context.fillRect((appleX * lengthPart), (appleY * lengthPart), lengthPart, lengthPart);
+        context.fillStyle = "#cc3333";
+        context.fillRect((appleX * lengthPart), (appleY * lengthPart), lengthPart/2, lengthPart/2);
         
-        context.fillStyle = "green";
-
-        for(let i = 0; i< trail.length; i++) {
-            context.fillRect(trail[i].x*lengthPart, trail[i].y*lengthPart, lengthPart, lengthPart);
+        context.fillStyle = "#5eff5e";
+        for(let i = 0; i < trail.length; i++) {
+            context.fillRect(trail[i].x*lengthPart, trail[i].y*lengthPart, lengthPart/2, lengthPart/2);
         
             if(trail[i].x == positionX && trail[i].y == positionY) {
                 speedX = 0;
@@ -65,6 +64,7 @@ window.onload = () => {
                 taill = 5;
                 positionX = 5;
                 positionY = 5; 
+
             };
         }
 

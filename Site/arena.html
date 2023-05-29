@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,26 +9,95 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="src/css/arena.css">
     <title>Snake</title>
 </head>
+
 <body>
-    
-    <div class="w-75 d-block text-center position-fixed top-50 start-50 translate-middle">
-        <p>Arena do jogo</p>
-        <button id="pause">Pause</button>
+
+    <nav class="navbar navbar-expand-md bg-primary">
+        <div class="container-fluid ">
+            <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="text-white nav-link" aria-current="page" href="#">Jogar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="text-white nav-link" href="#">Histórico</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="text-white d-sm-block d-md-none text-center position-fixed top-50 start-50 translate-middle bg-primary bg-opacity-50 w-75
+    border-none rounded-4 p-2">
+        <h2 class=" fs-1 fw-bold m-3"> Ops...</h2>
+        <p class="fs-4">
+            Atualmente a plataforma não disponibiliza uma versão para dispositívos
+            com tela menor que 768 px
+        </p>
+        <p class="fs-4">
+            Mas não se preocupe, pois nossa equipe já está trabalhando nisso.
+        </p>
+        <i class="bi bi-emoji-smile-upside-down fs-1 fw-bold"></i>
+    </div>
+
+    <div id="game-arena" class="d-lg-flex d-md-block d-sm-none d-none mt-3 mx-auto align-items-start p-3 ">
+
+        <button id="pause" class=" btn btn-primary border rounded-pill">Pause</button>
         <div id="placar"></div>
-        <div class="mx-auto">
-            <canvas id="arena" height="600" width="600"></canvas>
+        <div class="bg-primary border-none rounded-4 shadow-lg m-2 p-2">
+            <canvas class="border-none rounded-4" id="arena" height="500" width="500"></canvas>
             </canvas>
+        </div>
+
+        <div class="m-3 bg-primary bg-opacity-25 text-white p-3 border-none rounded-4">
+            <h1 class="fs-2 fw-bold">Instruções:</h1>
+            <p>Este jogo consiste em conduzir o personagem identificado
+                com a cor verde sobre a arena, com a inteção de coletar
+                maior quantidade de pontos indentificado na cor amarela.
+                De acordo com que o jogo vai avançando o personagem vai almentando de comprimento.
+            </p>
+            <p>Caso o personagem venha a tocar uma das bordas da arena ele sera direcionado
+                imediatamente a posição oposta da arena.
+            </p>
+            <p>O jogo acaba quando o personágem toca seu proprio corpo.</p>
+            <p class="fs-5">Monvimentação:</p>
+            <p>
+                <i class="bi bi-arrow-up-square p-2"></i> para mover o personagem em direção a borda superior da arena; 
+            </p>
+            <p>
+                <i class="bi bi-arrow-right-square p-2"></i> para mover o personagem em direção a borda direita da
+                arena;
+            </p>
+            <p>
+                <i class="bi bi-arrow-down-square p-2"></i> para mover o personagem em direção a borda inferior da
+                arena;
+            </p>
+            <p><i class="bi bi-arrow-left-square p-2"></i> para mover o personagem em direção a borda esquerda da
+                arena;
+            </p>
         </div>
 
 
     </div>
 
+    <footer class="text-bg-primary fixed-bottom text-center">
+        <p class="my-1"><i class="bi bi-c-circle"></i> Desenvolvido pelo grupo X</p>
+    </footer>
+
     <script src="src/js/arenaGame.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
     </script>
-   
+
 </body>
+
 </html>
