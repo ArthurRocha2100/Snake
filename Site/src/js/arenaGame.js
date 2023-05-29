@@ -13,8 +13,10 @@ window.onload = () => {
         scorePlayer.innerHTML = count
     }
 
+    const sepedPlayer = 100
+
     
-    setInterval(game, 70);
+    setInterval(game, sepedPlayer);
 
     const speed = 1;
     var speedX = 0;
@@ -58,7 +60,7 @@ window.onload = () => {
         for(let i = 0; i < trail.length; i++) {
             context.fillRect(trail[i].x*lengthPart, trail[i].y*lengthPart, lengthPart/2, lengthPart/2);
         
-            if(trail[i].x == positionX && trail[i].y == positionY) {
+            if(trail[i].x == positionX && trail[i].y == positionY && count > 0) {
                 speedX = 0;
                 speedY = 0;
                 appleX = 3;
@@ -68,6 +70,7 @@ window.onload = () => {
                 positionY = 5; 
                 count = 0;
                 updateScore();
+                alert('fim de jogo')
             };
         }
 
