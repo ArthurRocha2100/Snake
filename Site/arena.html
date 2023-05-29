@@ -12,9 +12,16 @@
 </head>
 <body>
     
-    <div class="d-flex mx-auto">
-        <canvas id="arena" height="600" width="600" class="position-fixed top-50 start-50 translate-middle" ></canvas>
-        </canvas>
+    <div class="w-75 d-block text-center position-fixed top-50 start-50 translate-middle">
+        <p>Arena do jogo</p>
+        <button id="pause">Pause</button>
+        <div id="placar"></div>
+        <div class="mx-auto">
+            <canvas id="arena" height="600" width="600"></canvas>
+            </canvas>
+        </div>
+
+
     </div>
 
     <script src="src/js/arenaGame.js"></script>
