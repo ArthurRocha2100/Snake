@@ -2,12 +2,17 @@ window.onload = () => {
 
     var arenaG = document.getElementById('arena');
     var context = arenaG.getContext("2d") ;
+    let scorePlayer = document.getElementById('score');
     document.addEventListener("keydown", keyPush);
-
+    
     document.getElementById('pause').onclick = () => {
         alert('jogo parado')
+    };
+
+    const updateScore= () => {
+        scorePlayer.innerHTML = count
     }
-    
+
     
     setInterval(game, 70);
 
@@ -20,13 +25,10 @@ window.onload = () => {
     var quantitP = 25;
     var appleX = 3; 
     var appleY = 3;
-
+    let count = 0;
     var trail = [];
-
     let taill = 5;
     
-    
-
 
     function game(){
        
@@ -64,7 +66,8 @@ window.onload = () => {
                 taill = 5;
                 positionX = 5;
                 positionY = 5; 
-
+                count = 0;
+                updateScore();
             };
         }
 
@@ -81,7 +84,8 @@ window.onload = () => {
             taill++;
             appleX = Math.floor(Math.random()*quantitP);
             appleY = Math.floor(Math.random()*quantitP);
-            score++;
+            count++;
+            updateScore();
         }
     }
 
