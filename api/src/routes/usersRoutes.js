@@ -7,7 +7,7 @@ const router = express.Router();
 router
     .get("/user", usersController.userList)
     .get("/user/:id", usersController.listUserById)
-    .post("/auth/login", userController.checkUserExsistsByEmail)
+    .post("/user/checked", userController.checkUserExsistsByEmail)
     .post("/user" , usersController.addUser)
     .put("/user/:id", usersController.userUpdate)
     .delete("/user/:id", usersController.userDelete)

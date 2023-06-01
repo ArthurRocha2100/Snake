@@ -1,4 +1,4 @@
-const url = 'http://localhost:3000/user'
+const url = 'http://localhost:3030/user'
 
 axios.get(url)
     .then((res) => {
