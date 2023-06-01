@@ -13,7 +13,7 @@ class authController {
             res.status(200).send(login)
         }
         catch(err){
-            res.status(401).send({message: `${err.message} login não deu certo`})
+            res.status(401).send({message: err.message})
         }
     }
 

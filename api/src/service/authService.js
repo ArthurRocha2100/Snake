@@ -1,34 +1,26 @@
 import user from '../models/User.js';
-import bcryptjs from 'bcryptjs';
 import jwt from 'jsonwebtoken';
-import sct from '../config/secret.js';
+import secret from '../config/secret.js';
 
 class authService {
 
     async login(dto){
         
-        const usr = await user.findOne({
-            attributes: ['_id', 'email', 'password'],
-            where: {
-                email: dto.email
-            }
-        });
+        const usr = await user.findOne({email: dto.email});
 
         if(!usr) {
-            throw new Error('deu erro aqui ó.')
-        }
+            throw new Error('user not found');
+        } 
 
-        const isValidPassword = await bcryptjs.compare(dto.password, usr.password);
-
-        if(!isValidPassword) {
-            throw new Error('invalid user or password')
+        if(dto.password != usr.password) {
+            throw new Error(`invalid user or password`)
         }
 
         const accssesToken = jwt.sign({
-            id: usr.id,
+            name: usr.name,
             email: usr.email
-        }, sct.secret, {
-            expiresIn: 86400
+        }, secret,{
+            expiresIn:'24H'
         })
 
         return {accssesToken}
