@@ -1,5 +1,5 @@
 document.getElementById('user-email').onchange = () => {
-    const url = 'http://localhost:3000/auth/login';
+    const url = 'http://localhost:3000/auth/checked';
 
     var emailLogin = document.getElementById('user-email').value;
 
@@ -7,6 +7,7 @@ document.getElementById('user-email').onchange = () => {
         email: emailLogin
 
     } 
+    
     console.log(emailRequired);
 
     axios.post(url, emailRequired)
