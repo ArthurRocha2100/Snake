@@ -9,11 +9,10 @@ class authController {
 
         try{
             const login = await auth.login({email,password});
-
             res.status(200).send(login)
         }
         catch(err){
-            res.status(401).send({message: err.message})
+            res.status(500).send(err.message)
         }
     }
 

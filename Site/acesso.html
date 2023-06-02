@@ -39,12 +39,12 @@
             <h2 class="fs-5 text-center p-4 text-white">Acessar o sistema</h2>
 
             <div class="form-floating mb-3">
-                <input id="user-email" type="email" class="form-control" required>
+                <input id="user-email" type="email" class="form-control" value ="zedois@email.com" required>
                 <label class="form-lable">Email</label>
             </div>
 
             <div class="form-floating mb-3">
-                <input id="user-password" type="password" class="form-control"  required>
+                <input id="user-password" type="password" class="form-control" value="abc123" required>
                 <label>Senha</label>
             </div>
 
@@ -57,6 +57,34 @@
         <p class="my-1"><i class="bi bi-c-circle"></i> Desenvolvido pelo grupo X</p>
     </footer>
 
+
+
+    <script>
+       
+        document.getElementById('user-password').onblur = () => {
+            
+            const url = 'http://localhost:3000/auth/login/user'
+            const email = document.getElementById('user-email').value;
+            const password = document.getElementById('user-password').value;
+            
+            const data =  {
+                email: email,
+                password: password
+            }
+
+
+            axios.post(url, data)
+                .then((res) => {
+                    output.innerHTML = res.data;
+                })
+            
+            // window.location.href = 'http://127.0.0.1:5500/Site/acesso.html'
+
+        }
+        
+
+
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous">
     </script>

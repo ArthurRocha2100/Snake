@@ -1,18 +1,17 @@
 body{
-    background: #DBDBDB;
+    background: #a2c5f3;
 }
 
-.thead-escuto{
-    background: #212529;
+.thead-primary{
+    background: #0d6efd;
     color: #FFFF;
 }
 
 #edit-btn, #delete-btn{
     border: none;
     margin-bottom: 1rem;
-    background: #212529;
+    background: #0d6efd;
     color: #FFFF;
-    border-radius: 5px;
 }
 
 #delete-btn:hover{
@@ -21,4 +20,12 @@ body{
 
 #edit-btn:hover{
     background: #006e00;
+}
+
+@media (max-width: 576px) {
+    .container-usuarios {
+        width: 100%;
+        margin: 0;
+        font-size: .7rem;
+    }
 }

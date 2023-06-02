@@ -5,7 +5,7 @@ const router = express.Router();
 
 
 router
-    .post("/auth/login",authController.login)
+    .post("/auth/login/user",authController.login)
 
 
 export default router

@@ -8,8 +8,6 @@ document.getElementById('user-email').onchange = () => {
 
     } 
     
-    console.log(emailRequired);
-
     axios.post(url, emailRequired)
         .then(() => {
             document.getElementById('msg').innerHTML = (
