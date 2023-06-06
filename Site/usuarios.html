@@ -17,6 +17,26 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
 
+    <nav class="navbar navbar-expand-md bg-primary">
+        <div class="container-fluid ">
+            <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="text-white nav-link" aria-current="page" href="arena.html">Arena</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="text-white nav-link" href="usuarios.html">Usuários</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
     <div id="delete-div" class="w-25 position-absolute top-50 start-50 translate-middle mx-auto bg-secondary d-none border rounded-3">
 
         <i id="close-btn" class="bi bi-x-circle text-light position-absolute top-0 end-0 m-3"></i>
@@ -48,7 +68,7 @@
     </div>
 
     <div class="w-80 my-2 d-lg-block container container-usuarios">
-        <h2 class="titulo mb-lg-3 fs-4">Lista de usuários Cadastrados</h2>
+        <h2 class="titulo mb-lg-3 fs-4 text-white">Lista de usuários Cadastrados</h2>
     
         <button id="edit-btn" class=" border-none rounded-pill"><i class="bi bi-pencil m-2"> Editar</i></button>
         <button id="delete-btn" class=" border-none rounded-pill"><i class="bi bi-trash3 m-2"></i> Excluir</button>
